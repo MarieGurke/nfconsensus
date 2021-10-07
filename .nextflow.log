@@ -1,0 +1,80 @@
+Oct-07 09:48:23.156 [main] DEBUG nextflow.cli.Launcher - $> nextflow run consensus.nf --bamdir /home/marie/Desktop/test_dataa/output/ --ref /home/marie/Desktop/test_dataa/Ref/GCF_014108235.1_mMyoMyo1.p_genomic.fa --outdir /home/marie/Desktop/test_dataa/output/consensus/ --scaf NC_029346.1 --mindepth 3
+Oct-07 09:48:23.308 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+Oct-07 09:48:23.341 [main] INFO  nextflow.cli.CmdRun - Launching `consensus.nf` [infallible_fourier] - revision: 1479cbc533
+Oct-07 09:48:23.469 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/marie/.nextflow/plugins
+Oct-07 09:48:23.470 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-07 09:48:23.473 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Oct-07 09:48:23.483 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-07 09:48:23.485 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-07 09:48:23.490 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-07 09:48:23.502 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-07 09:48:23.557 [main] DEBUG nextflow.Session - Session uuid: 259402d6-2895-4762-8668-00249bc8c1f3
+Oct-07 09:48:23.557 [main] DEBUG nextflow.Session - Run name: infallible_fourier
+Oct-07 09:48:23.559 [main] DEBUG nextflow.Session - Executor pool size: 8
+Oct-07 09:48:23.571 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.04.3 build 5560
+  Created: 21-07-2021 15:09 UTC (17:09 CEST)
+  System: Linux 5.11.0-37-generic
+  Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 37789@barbara [127.0.1.1]
+  CPUs: 8 - Mem: 15.2 GB (434.8 MB) - Swap: 2 GB (2 GB)
+Oct-07 09:48:23.588 [main] DEBUG nextflow.Session - Work-dir: /home/marie/Desktop/nfconsensus/work [ext2/ext3]
+Oct-07 09:48:23.589 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/marie/Desktop/nfconsensus/bin
+Oct-07 09:48:23.599 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-07 09:48:23.611 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-07 09:48:23.827 [main] DEBUG nextflow.Session - Session start invoked
+Oct-07 09:48:24.807 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-07 09:48:24.816 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: IndexBAM, GetRegion, CreateConsensus
+Oct-07 09:48:24.824 [main] INFO  nextflow.Nextflow - Fancy nextflow consensus creater
+===================================
+Bam directory           : /home/marie/Desktop/test_dataa/output/
+Reference file          : /home/marie/Desktop/test_dataa/Ref/GCF_014108235.1_mMyoMyo1.p_genomic.fa
+Output directory        : /home/marie/Desktop/test_dataa/output/consensus/
+Region or scaffold      : NC_029346.1
+Min Depth               : 3
+
+Oct-07 09:48:24.857 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/marie/Desktop/test_dataa/output/; pattern: */*.bam; options: [:]
+Oct-07 09:48:25.011 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-07 09:48:25.011 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-07 09:48:25.019 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-07 09:48:25.025 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=15.2 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Oct-07 09:48:25.192 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-07 09:48:25.193 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-07 09:48:25.213 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Oct-07 09:48:25.213 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-07 09:48:25.219 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Oct-07 09:48:25.219 [main] DEBUG nextflow.Session - Session await
+Oct-07 09:48:25.381 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:25.387 [Task submitter] INFO  nextflow.Session - [a9/7dc2b6] Submitted process > IndexBAM (3)
+Oct-07 09:48:25.400 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:25.401 [Task submitter] INFO  nextflow.Session - [1d/fca794] Submitted process > IndexBAM (2)
+Oct-07 09:48:25.407 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:25.408 [Task submitter] INFO  nextflow.Session - [11/120ffd] Submitted process > IndexBAM (1)
+Oct-07 09:48:26.040 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: IndexBAM (2); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/1d/fca7949aec8d9b81b3384b07a36512]
+Oct-07 09:48:26.103 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:26.111 [Task submitter] INFO  nextflow.Session - [96/4644d9] Submitted process > GetRegion (1)
+Oct-07 09:48:26.174 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: GetRegion (1); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/96/4644d9bcd8ca7300c99893e05f6af4]
+Oct-07 09:48:26.196 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:26.215 [Task submitter] INFO  nextflow.Session - [3f/ffafd9] Submitted process > CreateConsensus (1)
+Oct-07 09:48:26.354 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: CreateConsensus (1); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/3f/ffafd909307370915caf65640e6582]
+Oct-07 09:48:26.376 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=24; maxQueueSize=72; keepAlive=1m
+Oct-07 09:48:38.951 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: IndexBAM (3); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/a9/7dc2b6c149bc8e67585606af29eba0]
+Oct-07 09:48:38.960 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:38.960 [Task submitter] INFO  nextflow.Session - [38/2e318c] Submitted process > GetRegion (2)
+Oct-07 09:48:38.996 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: GetRegion (2); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/38/2e318c14a4cb6e53665c57cced5e40]
+Oct-07 09:48:39.004 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:39.004 [Task submitter] INFO  nextflow.Session - [02/60528f] Submitted process > CreateConsensus (2)
+Oct-07 09:48:39.150 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: CreateConsensus (2); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/02/60528f227c0e6268aa0506c43f0c59]
+Oct-07 09:48:39.367 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: IndexBAM (1); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/11/120ffd059e189e530da68501a8a3ba]
+Oct-07 09:48:39.375 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:39.376 [Task submitter] INFO  nextflow.Session - [48/5b2112] Submitted process > GetRegion (3)
+Oct-07 09:48:39.409 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: GetRegion (3); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/48/5b211214b1230a15df8a8af36ad988]
+Oct-07 09:48:39.417 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-07 09:48:39.417 [Task submitter] INFO  nextflow.Session - [0b/ce481d] Submitted process > CreateConsensus (3)
+Oct-07 09:48:39.585 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: CreateConsensus (3); status: COMPLETED; exit: 0; error: -; workDir: /home/marie/Desktop/nfconsensus/work/0b/ce481d2e0099fd8d827b44f82ed599]
+Oct-07 09:48:39.587 [main] DEBUG nextflow.Session - Session await > all process finished
+Oct-07 09:48:39.589 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-07 09:48:39.602 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=9; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=28.3s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=0; ]
+Oct-07 09:48:39.686 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Oct-07 09:48:39.696 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
