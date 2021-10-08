@@ -42,16 +42,32 @@ process GetRegion {
 
 process CreateConsensus {
 
-  publishDir "${params.outdir}", mode: 'copy'
-
   input:
   file(bam) from regbam_ch
 
   output:
-  file('*.fa.gz')
+  file('*.fa.gz') into fasta_ch
 
   script:
   """
   angsd -doFasta 2 -doCounts 1 -setMinDepth ${params.mindepth} -i $bam -out ${bam.baseName}
   """
+}
+
+process FastaHeader {
+
+  publishDir "${params.outdir}", mode: 'copy'
+
+  input:
+  file(fasta) from fasta_ch
+
+  output:
+  file('*.fa')
+
+  script:
+  head = fasta.simpleName
+  """
+  zcat $fasta | sed "1s/.*/\\>${head.replaceAll("_"," ")}/" > ${head}.fa
+  """
+
 }
