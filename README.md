@@ -6,7 +6,8 @@ Steps of the pipeline are:
 
 1. Indexing of bam files.
 2. Reducing bam file to only that region for which the consensus should be created.
-3. Calling the consensus using angsd's [doFasta] (http://www.popgen.dk/angsd/index.php/Fasta) algorithm using the majority rule (consensus, -doFasta 2 ) criterium. 
+3. Calling the consensus using angsd's [doFasta](http://www.popgen.dk/angsd/index.php/Fasta) algorithm using the majority rule (consensus, -doFasta 2 ) criterium.
+4. Adds the sample and scaffold name to the fasta header.
 
 
 
