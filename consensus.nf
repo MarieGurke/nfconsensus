@@ -50,7 +50,7 @@ process CreateConsensus {
 
   script:
   """
-  angsd -doFasta 2 -doCounts 1 -setMinDepth ${params.mindepth} -i $bam -out ${bam.baseName}
+  angsd -doFasta 1 -doCounts 1 -setMinDepth ${params.mindepth} -i $bam -out ${bam.baseName}
   """
 }
 
