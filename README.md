@@ -1,6 +1,6 @@
 # Nfconsensus - nextflow pipeline creating consensus sequences from bam files 
 
-This pipelines creates consensus sequences from bam files using angsd and outputs them in gzipped fasta format. 
+This pipelines creates consensus sequences for whole scaffolds from bam files using angsd and outputs them in gzipped fasta format. 
 
 Steps of the pipeline are: 
 
