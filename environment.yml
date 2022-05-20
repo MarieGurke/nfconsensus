@@ -5,4 +5,4 @@ channels:
 dependencies:
  - samtools=1.12
  - angsd=0.935
- - nextflow 
+ - nextflow=21.04.0  
